@@ -61,23 +61,37 @@ getprop ro.boot.verifiedbootstate  # 应为 green
 
 ## 5. 文档留档快照
 
-> 每次 push 到 GitHub 后，可回填本次提交的 commit SHA，形成前后呼应。
+> 每次 push 到 GitHub 后，回填本次提交的 commit SHA，形成前后呼应。
+
+**首次上线提交**：`80d7bea7a5d24ebe3d75b79ed3ec6eff06c40d28`（2026-10-02，19 文件全量）
+**上线前基线**：`9884d754141d6cae252944fcf3664fe61354a156`（仓库创建时初始 commit）
 
 | 文件 | 大小(B) | 备注 |
 | --- | --- | --- |
-| README.md | 5044 | |
+| README.md | 5451 | |
 | DISCLAIMER.md | 1940 | |
+| hashes.md | 3978 | 本页 |
 | docs/00-名词解释.md | 4943 | |
 | docs/01-项目背景.md | 2709 | |
 | docs/02-目标设备与环境.md | 2159 | |
 | docs/03-当前进展与卡点.md | 3850 | |
 | docs/04-payload-反汇编笔记.md | 5197 | |
 | docs/05-上游PR调研笔记.md | 3059 | |
-| journal/README.md | 1902 | |
+| analysis/README.md | 1676 | |
+| analysis/01-反汇编环境与方法.md | 2842 | |
+| analysis/02-碰撞阈值定位.md | 4021 | |
+| analysis/03-futex哈希路径排除.md | 2986 | |
+| analysis/04-上游5.15参数档对比.md | 2704 | |
+| journal/README.md | 1950 | |
 | journal/TEMPLATE.md | 804 | |
 | journal/2026-10-02-001-*.md | 1545 | |
 | journal/2026-10-02-002-*.md | 2225 | |
+| journal/2026-10-02-003-*.md | 2845 | |
+| journal/2026-10-02-004-*.md | — | 本次上线记录（随第二次提交入库） |
 | rmg-handoff.md（设备侧） | 15525 | `68d21b1ec6ea1ee1564ea60634b4c2ac0f325fc36647c831563edc128a2a4b68` |
+
+> 核验结果：远端 `git/trees/main?recursive=1` 与本地逐文件比对，**19/19 大小一致（ALL GREEN）**。
+> 台账纪律：新增文件后同步本表；commit SHA 与文件清单成对出现，便于追溯"哪一版长什么样"。
 
 ## 6. 校验方法
 
